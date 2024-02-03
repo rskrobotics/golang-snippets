@@ -1,4 +1,4 @@
-package main	
+package functions	
 
 // func (r reciever) identifier (p parameter/s) (return(s)){ ... }
 

@@ -1,4 +1,4 @@
-package main
+package functions
 
 import (
 	"bytes"
@@ -17,26 +17,25 @@ func (p person) writeOut(w io.Writer) error {
 	return err
 }
 
-
-func main()  {
+func main() {
 	f, err := os.Create("output.txt")
 	if err != nil {
 		log.Fatalf("error %s", err)
 	}
 	defer f.Close()
 
-	/* 
-	s := []byte("I am Giovanni Giorgio, but everyone calls me Giorgio")
+	/*
+		s := []byte("I am Giovanni Giorgio, but everyone calls me Giorgio")
 
-	_, err = f.Write(s)
-	if err != nil{
-		log.Fatalf("error %s", err)
-	}
+		_, err = f.Write(s)
+		if err != nil{
+			log.Fatalf("error %s", err)
+		}
 
-	b := bytes.NewBufferString("APEROL")
-	b.Write([]byte(" SPRITZ"))
-	b.Reset()
-	b.Write([]byte("BEER")) */
+		b := bytes.NewBufferString("APEROL")
+		b.Write([]byte(" SPRITZ"))
+		b.Reset()
+		b.Write([]byte("BEER")) */
 
 	// fmt.Println(b.String())
 
@@ -49,11 +48,3 @@ func main()  {
 	p.writeOut(f)
 
 }
-
-
-
-
-
-
-
-
