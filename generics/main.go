@@ -2,6 +2,8 @@ package main
 
 import "fmt"
 
+type any interface
+
 func swapper[T, V any](a T, b V)(V, T){
 	return b, a
 }
